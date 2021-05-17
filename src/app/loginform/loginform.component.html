@@ -1,0 +1,55 @@
+<div class="main">
+  <!-- <br><br> -->
+  <div class="container Login">
+    <form [formGroup]="login" autocomplete="on">
+      <div class="jumbotron backgroundcolor">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="col-lg-3">
+              <!-- <img src="./assets/outputoflist.png" width="100%" class="image"> -->
+              <img src="./assets/oie_b0EQ4GdRxh1i.png" width="100%" class="image">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="col-lg-8">
+              <h3 class="text-center member">Member Login</h3>
+            </div>
+            <div class="col-lg-8">
+              <!-- email -->
+              <i class="fa fa-envelope" id="icon" aria-hidden="true"></i>
+              <input type="text" class="form-control email fa fa-envelope" placeholder="Email" formControlName="email"
+                [class.is-invalid]="f.email.touched && f.email.invalid">
+              <div *ngIf="(f.email.touched || submitted) && f.email.invalid" class="alert alert-danger">
+                <div *ngIf="f.email.errors.required">
+                  Email-id is required
+                </div>
+                <div *ngIf="f.email.errors.email">
+                  Enter the valid emailid
+                </div>
+              </div>
+              <!-- password -->
+            <b>  <i class="fa fa-lock" id="icon" aria-hidden="true"></i></b>
+              <input type="password" class="form-control email mb-4" placeholder="Password" formControlName="password"
+                [class.is-invalid]="(f.password.touched || submitted) && f.password.invalid">
+              <div *ngIf="(f.password.touched || submitted) && f.password.invalid" class="alert alert-danger">
+                <div *ngIf="f.password.errors.required">
+                  password is required
+                </div>
+              </div>
+              <button class="btn btn-success btn-block button"  id="myBtn"
+              (click)="onsubmit(login.value)" 
+              type="submit">LOGIN</button>
+              <p class="text-center mt-4"><span class="forgot">Forgot</span> <b> Username/Password?</b></p>
+              <p class="text-center create">Create Your Account <i style='font-size:18px' class='fas'> &#xf30b;</i>
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <br>
+</div>
+
+

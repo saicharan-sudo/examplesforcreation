@@ -1,0 +1,222 @@
+<nav class="" id="top">
+    <div class="text-left" id="signup">
+        <i class="fa fa-eye" aria-hidden="true" id="registericon"></i>
+        View User's
+        <div class="d-flex flex-row-reverse">
+            <button class="btn btn-outline text-light" id="logouttop"
+            (click)="logout()" 
+            >
+                <i class="fa fa-sign-out"></i>
+                Logout</button>           
+          </div>
+    </div>    
+</nav>
+
+<div class="container mt-3 mb-3">
+    <nav>
+        <div class="row">
+            <!-- <span class="mt-4" id="search">
+                Search</span> -->
+            <div class="col-lg-12">
+                <i class="fa fa-search" aria-hidden="true" id="iconsearch"></i>
+
+                <input type="text" [(ngModel)]="searchKey" 
+                (keyup)="search()" class="form-control"
+                 style="border-radius: 10px;padding: 0 37px;"
+                 placeholder="Search">
+            </div>
+        </div>
+       
+    </nav>
+</div>
+
+
+<div class="dropdown mb-3">
+    <button class="btn btn-default dropdown-toggle" id="buttondropdown"
+     type="button" data-toggle="dropdown" style="border-radius: 40px;">
+        No. Of pages
+    </button>
+    <div class="dropdown-menu">
+        <button class="dropdown-item" value="5" (click)="dropDownPageSelect($event)">5</button>
+        <button class="dropdown-item"  value="10"  (click)="dropDownPageSelect($event)">10</button>
+        <button class="dropdown-item"  value="15"  (click)="dropDownPageSelect($event)">15</button>
+    </div>
+</div>
+
+
+
+
+<table class="table table-bordered table-hover"
+ style="border-radius: 10px; text-align: center;"
+>
+    <thead class="thead-inverse" id="head">
+        <tr>
+            <th (click)="sort('id')"> Id
+                <i class="fa fa-caret-up" aria-hidden="true">
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </i>
+            </th>
+            <th (click)="sort('firstName')">FirstName
+                <i class="fa fa-caret-up" aria-hidden="true">
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </i>
+            </th>
+            <th (click)="sort('lastName')">LastName
+                <i class="fa fa-caret-up" aria-hidden="true">
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </i>
+            </th>
+            <th (click)="sort('email')">Email
+                <i class="fa fa-caret-up" aria-hidden="true">
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </i>
+            </th>
+            <th (click)="sort('address')">Address
+                <i class="fa fa-caret-up" aria-hidden="true">
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </i>
+            </th>
+            <th (click)="sort('city')">City
+                <i class="fa fa-caret-up" aria-hidden="true">
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </i>
+            </th>
+            <th (click)="sort('country')">Country
+                <i class="fa fa-caret-up" aria-hidden="true">
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </i>
+            </th>
+            <th (click)="sort('rating')">Rating
+                <i class="fa fa-caret-up" aria-hidden="true">
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </i>
+            </th>
+            <th (click)="sort('status')">Status
+                <i class="fa fa-caret-up" aria-hidden="true">
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </i>
+            </th>
+            <th>Family Details</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let displayDetails of candidateDummy">
+            <td>{{ displayDetails.id }}</td>
+            <td>{{ displayDetails.firstName }}</td>
+            <td>{{ displayDetails.lastName }}</td>
+            <td>{{ displayDetails.email }}</td>
+            <td>{{ displayDetails.address }}</td>
+            <td>{{ displayDetails.city }}</td>
+            <td>{{ displayDetails.country }}</td>
+            <td>{{ displayDetails.rating }}</td>
+            <td>{{ displayDetails.status }}</td>
+            <!-- <td>{{ displayDetails.fatherName }}</td> -->
+
+<td>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-warning" id="view"
+ data-toggle="modal" data-target="#modelId" 
+ (click)="viewData(displayDetails)">
+view
+</button>
+
+
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable"
+     role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Family Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-inverse table-inverse table-responsive">
+                    <!-- <p class="text-center">Family Details</p> -->
+                    <thead class="thead-inverse">
+                    <tr>
+                    <th>Father Name</th>
+                    <th>Father Occupation</th>
+                    <th>Father MobileNumber</th>
+                    <th>Mother Name</th>
+                    <th>Mother Occupation</th>
+                    <th>Mother MobileNumber</th>
+                    <th>Home Address</th>
+                    <!-- <th>Edit</th>
+                    <th>Delete</th> -->
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td>{{ selectedViewData?.fatherName }}</td>
+                    <td>{{ selectedViewData?.fatherOccupation }}</td>
+                    <td>{{ selectedViewData?.fatherMobileNumber }}</td>
+                    <td>{{ selectedViewData?.motherName }}</td>
+                    <td>{{ selectedViewData?.motherOccupation }}</td>
+                    <td>{{ selectedViewData?.mothermobileNumber }}</td>
+                    <td>{{ selectedViewData?.homeAddress }}</td>
+                    <!-- <td  routerLink="/sidehome/signup/{{ displayDetails.id }}">
+                        <button class="btn btn-success">✓</button>
+                    </td>
+                    <td (click)="delete(displayDetails.id)">
+                        <button class="btn btn-danger">X</button>
+                    </td> -->
+                    </tr>
+                    </tbody>
+                    </table> 
+                  </div>
+            <div class="modal-footer">
+                
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <!-- <button type="button" class="btn btn-primary">Save</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+</td>
+            <td routerLink="/sidehome/signup/{{ displayDetails.id }}">
+                <button class="btn btn-success">✓</button>
+            </td>
+            <td (click)="delete(displayDetails.id)">
+                <button class="btn btn-danger">X</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+<ul class="pagination justify-content-center">
+
+    <li class="page-item"  [ngClass]="{disabled:currentPage === 0}">
+        <a class="page-link" (click)="pageSelect(currentPage - 1)">Previous</a>
+    </li>
+
+    <li class="page-item" *ngFor="let page of totalPagesData" 
+    [ngClass]="{active:currentPage == page}" style="cursor: default;" >
+        <a class="page-link" (click)="pageSelect(page)">{{ page+1 }}</a>
+    </li>
+    <li class="page-item" [ngClass]="{disabled:currentPage === totalPages-1}">
+        <a class="page-link" (click)="pageSelect(currentPage + 1)">Next</a>
+    </li>
+
+</ul>
+
+
+<div *ngFor="let page of pager.pages">
+
+    <button class="btn btn-dark" value="10" (click)="dropDownPageSelect($event)">{{page}}</button>
+    <button class="btn btn-dark" value="15" (click)="dropDownPageSelect($event)">{{page}}</button>
+
+</div>
+
+
+
+
+
+

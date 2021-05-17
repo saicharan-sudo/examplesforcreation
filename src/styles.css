@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+.row{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* body{ */
+    /* background-image: linear-gradient(to right, rgb(100, 86, 201),rgb(179, 81, 194)); */
+    /* background-image: url(./assets/13.-Pale-Violet-Red_1.jpg); */
+/* } */
+/* .form-control {
+    border: 0;
+} */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

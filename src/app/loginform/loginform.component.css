@@ -1,0 +1,67 @@
+.main{
+    /* background-image: linear-gradient(to right, rgb(100, 86, 201),rgb(179, 81, 194)); */
+/* padding-bottom: 216px; */
+    background-image: linear-gradient(to right, rgb(100, 86, 201),rgb(179, 81, 194));
+    padding-bottom:94px;
+
+/* transform: translate(0,9%); */
+
+}
+
+.Login{
+    padding-top: 119px;
+
+}
+
+.backgroundcolor{
+    background-color: rgb(255, 255, 255);
+    padding: 150px 0;
+
+
+}
+.login{
+    border-radius: 100%;
+}
+.email{
+    border-radius: 170px;
+    background-color: rgb(231, 231, 231);
+    padding: 22px 62px;
+
+}
+.button{
+    border-radius: 40px;
+    color: white;
+    font-size: larger;
+    font-family: sans-serif;
+    font-weight: bolder;
+    padding: 10px 0;
+    background-color: rgb(88, 184, 69);
+}
+.image{
+    margin: 28px 124px;
+    width: 321px;
+    border-radius: 100%;
+    background-color: white;
+}
+.member{
+    font-weight: bolder;
+    margin-bottom: 12px;
+    
+}
+
+#icon{
+    position: relative;
+    top: 36px;
+    left: 21px;
+    background-color: transparent;
+    color: #000000ad;
+}
+.create{
+    position: relative;
+    top: 140px;
+    margin-top: 35px;
+}
+.forgot{
+    font-size: 14px;
+}
+

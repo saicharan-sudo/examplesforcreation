@@ -1,0 +1,55 @@
+  <div class="row">
+   
+    <div class="col-lg-4 col-sm-6 col-xs-6 col-md-6 col-xl-2">
+      <ul class="nav flex-column" class="example main">
+        <li class="navbar-brand disabled">
+          <a class="active">
+            <img src="./assets/transparent icon thrymr.webp" width="100%" 
+            class="img-fluid imageicon active">
+          </a>
+        </li>
+        <li class="nav-item active" id="border">
+          <a class="nav-link text-left" routerLink="/sidehome/signup">
+            <i class="fa fa-home"></i>
+            Add User</a>
+          </li>
+
+<li class="nav-item text-left"  id="border">
+  <a class="nav-link" routerLink="/sidehome/snippet">
+    <i class="fa fa-table" aria-hidden="true"></i>
+    View User's</a>
+</li>
+<!-- 
+        <li class="nav-item active text-left" style="border-top: 1px solid rgba(255, 255, 255, 0.09);
+        border-bottom:1px solid rgba(255, 255, 255, 0.09)"
+        >
+          <a class="nav-link" routerLink="/sidehome/view">
+            <i class="fa fa-table" aria-hidden="true"></i>
+           manual </a>
+        </li>
+
+
+       
+        
+
+
+<li class="nav-item text-left">
+  <a class="nav-link" routerLink="/sidehome/changes">
+    <i class="fa fa-wrench" aria-hidden="true"></i>
+with 3 tools</a>
+</li> -->
+
+        <li class="nav-item logout text-left" style="border-top: 1px solid rgba(255, 255, 255, 0.09)">
+          <a class="nav-link"  (click)="logout()" >
+            <i class="fa fa-sign-out"></i>
+            Logout</a>
+        </li>
+      </ul>
+    </div>
+   
+  <div class="col-lg-8 col-sm-6 col-xs-6 col-md-6 col-xl-10">
+    <router-outlet></router-outlet>
+  </div>
+  </div>
+   
+

@@ -1,0 +1,298 @@
+{
+  "employees": [
+    {
+      "firstName": "saicharan.v",
+      "lastName": "vallam konda",
+      "email": "sai.charan12@gmail.com",
+      "address": "onetown,kurnool",
+      "dateOfBirth": "2021-05-03",
+      "city": "Kurnool",
+      "country": "India",
+      "rating": "4",
+      "status": "inactive",
+      "familyDetails": {
+        "fatherName": "Srinivasulu.v",
+        "fatherOccupation": "Sales Manager",
+        "fatherMobileNumber": "09949004733",
+        "motherName": "Rama Devi.v",
+        "motherOccupation": "Home Maker",
+        "mothermobileNumber": "09494733390",
+        "homeAddress": "one town,opp sree rama school,kurnool"
+      },
+      "id": 1
+    },
+    {
+      "firstName": "lakshman",
+      "lastName": "raja",
+      "email": "lraja@gmail.com",
+      "address": "Near saibaba Temple,Kodumur",
+      "dateOfBirth": "1999-05-05",
+      "city": "Kurnool",
+      "country": "India",
+      "rating": "4",
+      "status": "active",
+      "familyDetails": {
+        "fatherName": "Suresh.r",
+        "fatherOccupation": "Bussines man",
+        "fatherMobileNumber": "09133741310",
+        "motherName": "Jayasree",
+        "motherOccupation": "Home Maker",
+        "mothermobileNumber": "09133741310",
+        "homeAddress": "Near saibaba Temple,Kodumur"
+      },
+      "id": 2
+    },
+    {
+      "firstName": "kishore",
+      "lastName": "sunkara",
+      "email": "kishore@gmail.com",
+      "address": "v.r.paradise,kurnool",
+      "dateOfBirth": "2000-01-28",
+      "city": "Kurnool",
+      "country": "India",
+      "rating": "2",
+      "status": "inactive",
+      "familyDetails": {
+        "fatherName": "veerababu",
+        "fatherOccupation": "Electrical Engineer",
+        "fatherMobileNumber": "07386396568",
+        "motherName": "Kasthuri Bhai",
+        "motherOccupation": "Accountant",
+        "mothermobileNumber": "7386396568",
+        "homeAddress": "v.r.paradise,kurnool"
+      },
+      "id": 3
+    },
+    {
+      "firstName": "nikhil",
+      "lastName": "Rakkapol",
+      "email": "nikhillucky@gmail.com",
+      "address": "v.r colony,kurnool",
+      "dateOfBirth": "1997-11-30",
+      "city": "Kurnool",
+      "country": "SouthAfrica",
+      "rating": "4",
+      "status": "inactive",
+      "familyDetails": {
+        "fatherName": "sri",
+        "fatherOccupation": "Army Officer",
+        "fatherMobileNumber": "909000000000",
+        "motherName": "Aruna",
+        "motherOccupation": "Home Maker",
+        "mothermobileNumber": "1234567890",
+        "homeAddress": "v.r colony,kurnool"
+      },
+      "id": 4
+    },
+    {
+      "firstName": "prem",
+      "lastName": "sai",
+      "email": "premsai@gmai.com",
+      "address": "Gandhi nagar,hyderabad",
+      "dateOfBirth": "2000-01-30",
+      "city": "Nandyal",
+      "country": "India",
+      "rating": "4",
+      "status": "inactive",
+      "familyDetails": {
+        "fatherName": "poola",
+        "fatherOccupation": "Bussiness Man",
+        "fatherMobileNumber": "9515719047",
+        "motherName": "poola",
+        "motherOccupation": "Home Maker",
+        "mothermobileNumber": "1234567890",
+        "homeAddress": "Gandhi nagar,Hyderabad"
+      },
+      "id": 5
+    },
+    {
+      "firstName": "krishna",
+      "lastName": "murthy",
+      "email": "murthy@gmail.com",
+      "address": "onetown,kurnool",
+      "dateOfBirth": "2000-07-20",
+      "city": "Kurnool",
+      "country": "India",
+      "rating": "4",
+      "status": "active",
+      "familyDetails": {
+        "fatherName": "Sathyanarayana",
+        "fatherOccupation": "Market Yard",
+        "fatherMobileNumber": "8520890603",
+        "motherName": "Kotha",
+        "motherOccupation": "Home Maker",
+        "mothermobileNumber": "8008030655",
+        "homeAddress": "Onetown,Kurnool"
+      },
+      "id": 6
+    },
+    {
+      "firstName": "rehana",
+      "lastName": "shaik",
+      "email": "rehana@gmail.com",
+      "address": "abc",
+      "dateOfBirth": "1992-06-05",
+      "city": "Nandyal",
+      "country": "India",
+      "rating": "5",
+      "status": "active",
+      "familyDetails": {
+        "fatherName": "shaik abdul rahiman",
+        "fatherOccupation": "Officer",
+        "fatherMobileNumber": "1234567890",
+        "motherName": "shaik hassena banu",
+        "motherOccupation": "Home Maker",
+        "mothermobileNumber": "12344567890",
+        "homeAddress": "nandyal"
+      },
+      "id": 7
+    },
+    {
+      "firstName": "abcd",
+      "lastName": "dcba",
+      "email": "abcdef@gmail.com",
+      "address": "kurnool",
+      "dateOfBirth": "2021-04-30",
+      "city": "Nandyal",
+      "country": "USA",
+      "rating": "4",
+      "status": "active",
+      "familyDetails": {
+        "fatherName": "ABCD",
+        "fatherOccupation": "xyz",
+        "fatherMobileNumber": "1234567890",
+        "motherName": "xyz",
+        "motherOccupation": "some occupation",
+        "mothermobileNumber": "123456789",
+        "homeAddress": "nandyal"
+      },
+      "id": 8
+    },
+    {
+      "firstName": "lakshman",
+      "lastName": "raja",
+      "email": "lraja@gmail.com",
+      "address": "Near saibaba Temple,Kodumur",
+      "dateOfBirth": "1999-05-05",
+      "city": "Kurnool",
+      "country": "India",
+      "rating": "4",
+      "status": "active",
+      "familyDetails": {
+        "fatherName": "Suresh",
+        "fatherOccupation": "Bussines man",
+        "fatherMobileNumber": "09133741310",
+        "motherName": "Jayasree",
+        "motherOccupation": "Home Maker",
+        "mothermobileNumber": "09133741310",
+        "homeAddress": "Near saibaba Temple,Kodumur"
+      },
+      "id": 9
+    },
+    {
+      "firstName": "kishore",
+      "lastName": "sunkara",
+      "email": "kishore@gmail.com",
+      "address": "v.r.paradise,kurnool",
+      "dateOfBirth": "2000-01-28",
+      "city": "Kurnool",
+      "country": "India",
+      "rating": "2",
+      "status": "inactive",
+      "familyDetails": {
+        "fatherName": "veerababu",
+        "fatherOccupation": "Electrical Engineer",
+        "fatherMobileNumber": "07386396568",
+        "motherName": "Kasthuri Bhai",
+        "motherOccupation": "Accountant",
+        "mothermobileNumber": "7386396568",
+        "homeAddress": "v.r.paradise,kurnool"
+      },
+      "id": 11
+    },
+    {
+      "firstName": "prem",
+      "lastName": "sai",
+      "email": "premsai@gmai.com",
+      "address": "Gandhi nagar,hyderabad",
+      "dateOfBirth": "2000-01-30",
+      "city": "Nandyal",
+      "country": "India",
+      "rating": "4",
+      "status": "inactive",
+      "familyDetails": {
+        "fatherName": "poola",
+        "fatherOccupation": "Bussiness Man",
+        "fatherMobileNumber": "9515719047",
+        "motherName": "poola",
+        "motherOccupation": "Home Maker",
+        "mothermobileNumber": "1234567890",
+        "homeAddress": "Gandhi nagar,Hyderabad"
+      },
+      "id": 12
+    },
+    {
+      "firstName": "saicharan",
+      "lastName": "vallamkonda",
+      "email": "saicharan@gmail.com",
+      "address": "onetown,kurnool",
+      "dateOfBirth": "2021-04-29",
+      "city": "Nandyal",
+      "country": "India",
+      "rating": "3",
+      "status": "inactive",
+      "familyDetails": {
+        "fatherName": "vinit",
+        "fatherOccupation": "Sales Man",
+        "fatherMobileNumber": "08555085643",
+        "motherName": "lakshman",
+        "motherOccupation": "vinit",
+        "mothermobileNumber": "08555085643",
+        "homeAddress": "onetown,kurnool"
+      },
+      "id": 17
+    },
+    {
+      "firstName": "ismail",
+      "lastName": "dudakula",
+      "email": "ismail!@gmail.com",
+      "address": "nandyal",
+      "dateOfBirth": "1998-01-01",
+      "city": "Nandyal",
+      "country": "India",
+      "rating": "5",
+      "status": "active",
+      "familyDetails": {
+        "fatherName": "abc",
+        "fatherOccupation": "aabc",
+        "fatherMobileNumber": "1234567890",
+        "motherName": "cba",
+        "motherOccupation": "cba",
+        "mothermobileNumber": "4567891230",
+        "homeAddress": "nandyal"
+      },
+      "id": 18
+    },
+    {
+      "firstName": "Boggarapu",
+      "lastName": "Alekhya",
+      "email": "alekhya@gmail.com",
+      "address": "nandyal",
+      "dateOfBirth": "1997-01-01",
+      "city": "Nandyal",
+      "country": "India",
+      "rating": "5",
+      "status": "active",
+      "familyDetails": {
+        "fatherName": "abc",
+        "fatherOccupation": "cba",
+        "fatherMobileNumber": "ABC",
+        "motherName": "CBA",
+        "motherOccupation": "xyz",
+        "mothermobileNumber": "4561237890",
+        "homeAddress": "nandyal"
+      },
+      "id": 19
+    }
+  ]
+}

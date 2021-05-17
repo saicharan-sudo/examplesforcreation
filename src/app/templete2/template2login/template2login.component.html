@@ -1,0 +1,430 @@
+<nav class="" id="top">
+    <div class="text-left" id="signup">
+        <i class="fa fa-user-plus" aria-hidden="true" id="registericon"></i>
+        SignUp Form
+        <div class="d-flex flex-row-reverse">
+            <button class="btn btn-outline text-light" id="logouttop"
+            (click)="logout()" 
+            >
+                <i class="fa fa-sign-out"></i>
+                Logout</button>           
+          </div>
+    </div>    
+</nav>
+
+
+<div class="">
+    <h3 class="text-left Registration">Registration
+        <p class="underline">_____</p>
+
+    </h3>
+</div>
+
+
+<form [formGroup]="signUp">
+<div class="row">
+    <div class="col-lg-6">
+    <div class="container jumbotron mt-5" id="basicJumbotron">
+                <!-- fristname -->
+                <div class="row">
+                    <div class="col-lg-4">
+                        <b> First Name:</b>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <input type="text" class="form-control" formControlName="firstName" placeholder="First Name"
+                                id="radius" [class.is-invalid]="f.firstName.touched && f.firstName.invalid">
+                            <div class="text-danger" *ngIf="(f.firstName.touched||submitted) && f.firstName.invalid">
+                                <div *ngIf="f.firstName.errors.required">FirstName is required</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- lastname -->
+                <div class="row">
+                    <div class="col-lg-4"><b>Last Name:</b></div>
+                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <input type="text" class="form-control" formControlName="lastName" placeholder="Last Name"
+                                id="radius" [class.is-invalid]="f.lastName.touched && f.lastName.invalid"
+                                name="lastName">
+    <div *ngIf="(f.lastName.touched||submitted) && f.lastName.invalid" class="text-danger">
+                                <div *ngIf="f.lastName.errors.required">LastName is required</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- email -->
+                <div class="row">
+                    <div class="col-lg-4"><b>Email:</b></div>
+                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <input type="text" class="form-control" formControlName="email" name="email"
+                                placeholder="Email" id="radius" [class.is-invalid]="f.email.touched && f.email.invalid">
+                            <div *ngIf="(f.email.touched||submitted) && f.email.invalid" class="text-danger">
+                                <div *ngIf="f.email.errors.required">
+                                    Email-id is required
+                                </div>
+                                <div *ngIf="f.email.errors.email">
+                                    Enter the valid email-id
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- address -->
+                <div class="row">
+                    <div class="col-lg-4">
+                        <label class="my-auto"><b>Address:</b></label>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <input type="text" class="form-control" formControlName='address' name="address" id="radius"
+                                placeholder="Address" [class.is-invalid]="f.address.invalid && f.address.touched">
+                            <div *ngIf="f.address.invalid && (f.address.touched || submitted)" class="text-danger">
+                                <div *ngIf="f.address.errors.required">
+                                    Address must be entered
+                                </div>
+                                <div *ngIf="f.address.errors.minlength">
+                                    Address is minimum
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+<!-- Date of birth -->
+<div class="row">
+    <div class="col-lg-4">
+    <b>Date Of Birth</b>
+    </div>
+    <div class="col-lg-4">
+        <input type="date" class="form-control" 
+        formControlName="dateOfBirth"
+        id="radius">
+    </div>
+   
+    </div>
+
+                <!-- city -->
+                <div class="row">
+                    <div class="col-lg-4">
+                        <label for="website"><b>City:</b></label>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <select formControlName="city" class="form-control" id="radius"
+                                [class.is-invalid]="f.city.invalid && f.city.touched">
+                                <option [ngValue]="null">Choose City</option>
+                                <option *ngFor="let web of cityNames">{{web}}</option>
+                            </select>
+                            <div *ngIf="(f.city.touched||submitted) && f.city.invalid" class="text-danger">
+                                <div *ngIf="f.city.errors.required">Name is required.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- country -->
+                <div class="row">
+                    <div class="col-lg-4">
+                        <label class="my-auto"><b>Country:</b></label>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <select class="form-control" formControlName="country" id="radius"
+                                [class.is-invalid]="f.country.invalid && f.country.touched">
+                                <option>Please Select</option>
+                                <option *ngFor="let countryDisplay of countryNames">{{ countryDisplay }}</option>>
+                            </select>
+                            <div *ngIf="f.country.invalid && (f.country.touched||submitted)" class="text-danger">
+                                <div *ngIf="f.country.errors.required">
+                                    Choose from the list
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- rating -->
+                <div class="row">
+                    <div class="col-lg-4">
+                        <label class="my-auto"><b>Rating:</b></label>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <select class="form-control" formControlName="rating" id="radius"
+                                [class.is-invalid]="f.rating.invalid && f.rating.touched">
+                                <option>Please Select</option>
+                                <option *ngFor="let ratingDisplay of ratingNumbers">{{ ratingDisplay }}</option>>
+                            </select>
+                            <div *ngIf="f.rating.invalid && (f.rating.touched||submitted)" class="text-danger">
+                                <div *ngIf="f.rating.errors.required">
+                                    Choose from the list
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- status -->
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <label for="gender"><b>Status:</b></label>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="custom-control custom-radio">
+                                <input id="active" type="radio" value="active" name="status"
+                                    class="custom-control-input" formControlName="status">
+                                <label for="active" class="custom-control-label">Active</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="custom-control custom-radio">
+                                <input id="inactive" type="radio" value="inactive" name="status"
+                                    formControlName="status" class="custom-control-input">
+                                <label class="custom-control-label" for="inactive">InActive</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div *ngIf="(f.status.touched||submitted) && f.status.invalid" class="text-danger">
+                                <div *ngIf="f.status.errors.required">Choose from the fields</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- button -->
+                <!-- <div class="row" id="moment">
+                    <div class="col-lg-6">
+                    
+                    <button class="btn btn-success selfColor btn-block" type="submit"
+                    (click)="submit(signUp.value)"
+                    [disabled]=!signUp.valid style="border-radius: 40px;"
+                    >Submit</button>
+                    </div>
+                    <div class="col-lg-6">
+                        <button class="btn btn-outline btn-block selfcolor" 
+                        (click)="update(signUp.value)" style="border-radius: 40px;" >Update</button>
+                        </div>
+                    </div> -->
+            </div>
+        </div>
+        
+        <!-- new Form Parent Details -->
+
+        <div class="col-lg-6">
+            <div class="jumbotron container" id="basicJumbotron1">
+            <div formGroupName="familyDetails">
+                <div class="form-group">
+                    <div class="row">
+                    <div class="col-lg-4">
+                    <label><b>Father Name:</b></label>
+                    </div>
+                    <div class="col-lg-8">
+                    <input type="text" class="form-control" 
+                    formControlName="fatherName" id="radius" placeholder="Father Name"
+[class.is-invalid]="signUp.get('familyDetails.fatherName').touched && signUp.get('familyDetails.fatherName').invalid"        
+                    >
+    <div *ngIf="(signUp.get('familyDetails.fatherName').touched ||submitted) && signUp.get('familyDetails.fatherName').invalid" class="text-danger">
+<!-- <div *ngIf="signUp.get('familyDetails.fatherName').errors.touched"> -->
+    <!-- fatherMobileNumber -->
+    Father Name is required
+<!-- </div> -->
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+
+
+
+<!-- Father Occupation -->
+<div class="row">
+    <div class="col-lg-4">
+    <b>Father Occupation:</b>
+    </div>
+    <div class="col-lg-8">
+    <div class="form-group">
+    <input type="text" class="form-control" 
+    formControlName="fatherOccupation" placeholder="Father Occupation"
+    id="radius" 
+    [class.is-invalid]="signUp.get('familyDetails.fatherOccupation').touched && signUp.get('familyDetails.fatherOccupation').invalid "        
+
+    >
+    <div *ngIf="(signUp.get('familyDetails.fatherOccupation').touched||submitted) && signUp.get('familyDetails.fatherOccupation').invalid" class="text-danger">
+        <div>
+            FatherOccupation is required
+        </div>
+                            </div>
+    </div>
+    </div>
+    </div>
+
+
+
+    <!-- Father MobileNumber -->
+<div class="row">
+    <div class="col-lg-4">
+    <b>Father MobileNumber:</b>
+    </div>
+    <div class="col-lg-8">
+    <div class="form-group">
+    <input type="text" class="form-control" 
+    formControlName="fatherMobileNumber" placeholder="Father MobileNumber"
+    id="radius"
+    [class.is-invalid]="signUp.get('familyDetails.fatherMobileNumber').touched && signUp.get('familyDetails.fatherMobileNumber').invalid "        
+
+    >
+    <div *ngIf="(signUp.get('familyDetails.fatherMobileNumber').touched||submitted) && signUp.get('familyDetails.fatherMobileNumber').invalid" class="text-danger">
+        Father MobileNumber is required
+</div>
+
+    </div>
+    </div>
+    </div>
+
+
+
+    <!-- mother Name -->
+<div class="form-group">
+    <div class="row">
+    <div class="col-lg-4">
+    <label><b>Mother Name:</b></label>
+    </div>
+    <div class="col-lg-8">
+    <input type="text" class="form-control" 
+    formControlName="motherName" id="radius" placeholder="Mother Name"
+    [class.is-invalid]="signUp.get('familyDetails.motherName').touched && signUp.get('familyDetails.motherName').invalid "        
+
+    > 
+    <div *ngIf="(signUp.get('familyDetails.motherName').touched||submitted) && signUp.get('familyDetails.motherName').invalid" class="text-danger">
+Mother Name is required
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+    <!-- mother Occupation -->
+<div class="row">
+    <div class="col-lg-4">
+    <b>Mother Occupation:</b>
+    </div>
+    <div class="col-lg-8">
+    <div class="form-group">
+    <input type="text" class="form-control" 
+    formControlName="motherOccupation" placeholder="Mother Occupation"
+    [class.is-invalid]="signUp.get('familyDetails.motherOccupation').touched && signUp.get('familyDetails.motherOccupation').invalid "        
+
+    id="radius" >
+    <div *ngIf="(signUp.get('familyDetails.motherOccupation').touched||submitted) && signUp.get('familyDetails.motherOccupation').invalid" class="text-danger">
+Mobile Occupation is required
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+    <!-- mother MobileNumber -->
+<div class="row">
+    <div class="col-lg-4">
+    <b>Mother MobileNumber:</b>
+    </div>
+    <div class="col-lg-8">
+    <div class="form-group">
+    <input type="text" class="form-control" 
+    formControlName="mothermobileNumber" placeholder="Mother MobileNumber"
+    id="radius" 
+    [class.is-invalid]="signUp.get('familyDetails.mothermobileNumber').touched && signUp.get('familyDetails.mothermobileNumber').invalid "        
+
+    >
+    <div *ngIf="(signUp.get('familyDetails.mothermobileNumber').touched||submitted) && signUp.get('familyDetails.mothermobileNumber').invalid" class="text-danger">
+Mother Mobile Number is Required
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+   
+
+
+
+    <!-- home Address -->
+<div class="row">
+    <div class="col-lg-4">
+    <label><b>Home Address:</b></label>
+    </div>
+    <div class="col-lg-8">
+    <textarea rows="4" cols="3" formControlName="homeAddress"
+    class="form-control" placeholder="Address" id="radius"
+    [class.is-invalid]="signUp.get('familyDetails.homeAddress').touched && signUp.get('familyDetails.homeAddress').invalid "        
+
+    >
+
+    </textarea>
+    <div *ngIf="(signUp.get('familyDetails.homeAddress').touched||submitted) && signUp.get('familyDetails.homeAddress').invalid " class="text-danger">
+        Home Address is required
+
+    </div>
+    
+    </div>
+    </div>
+
+
+
+    
+    
+            </div>
+                
+
+            
+        </div>
+
+
+
+
+   
+   </div>
+   
+  
+
+
+
+</div>
+
+           <!-- button -->
+     <div class="row" id="moment1">
+        <div class="col-lg-6">
+        <button class="btn btn-success selfColor btn-block" type="submit"
+        (click)="submit(signUp.value)"
+        style="border-radius: 40px;"
+        >Submit</button>
+        
+        </div>
+        <div class="col-lg-6">
+        <button class="btn btn-outline selfColor1 btn-block" 
+        (click)="updated(signUp.value)" style="border-radius: 40px;" >Update</button>
+        </div>
+        </div>
+         
+
+    <!-- {{ signUp.value|json }} -->
+    </form>
+<!-- {{ signUp.valid }}
+<input type="text" bsDaterangepicker 
+[(ngModel)]="date" (click)="datetodisplay()"
+[bsConfig]="datepickerConfig"> -->
+

@@ -1,0 +1,81 @@
+.selfColor{
+    /* background: greenyellow; */
+    color: white;
+    font-family: cursive;
+    margin-left: 10px;
+}
+.selfcolor{
+    background: #b152c3;;
+    color: white;
+    font-family: cursive;
+
+}
+    .border {
+border-bottom: 1px solid black;
+    }
+    #basicJumbotron{
+        background: rgba(255, 255, 255);
+        transform: translate(0%,1.8%);
+        border-radius: 15px;
+        padding-bottom: 83px;
+    }
+    #basicJumbotron1{
+        background:rgba(255, 255, 255);
+        transform: translate(0%,4%);
+        border-radius: 15px;
+        padding-bottom: 23px;
+        margin-top: 35px;
+
+    }
+    #radius{
+        /* border-radius: 20px; */
+        background-color: rgba(231, 231, 231, 0.26);
+        border-left: 4px solid red;
+    }
+    #moment{
+        margin-top: 38px;
+    }
+    #moment1{
+        position: relative;
+        bottom: 60px;    
+    }
+    #top{
+        background-image: linear-gradient(to right, rgb(100, 86, 201),rgb(179, 81, 194));    margin: 0 -15px;
+    }
+    #signup{
+        color: white;
+    font-size: 25px;
+    font-family: cursive;
+    }
+    #registericon{
+        font-size: 30px;
+    margin-left: 50px;
+    color: white;
+    margin: 25px 0;
+    margin-left: 52px;
+    }
+    #logouttop{
+        margin-top: -71px;
+        font-size: 22px;
+        font-weight: bolder;
+        font-family: none;
+        margin-right: 43px;
+
+    }
+    #logouttop:hover{
+        background-color: #15bb9e
+    }
+    .Registration{
+        padding: 0 34px;
+        position: relative;
+        top: 86px;
+        z-index: 999;
+        font-family: fantasy;
+        font-weight: bolder;
+    }
+    .underline{
+        color: blue;
+        font-size: 35px;
+        margin-top: -26px;
+    }
+
